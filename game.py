@@ -10,8 +10,8 @@ import pygame
 #CONSTANTS
 SCREEN_SIZE = SCREEN_WIDTH, SCREEN_HEIGHT = 800, 600
 FRAME_RATE = 20
-BG_COLOR = (200, 200, 255)
-BG_COLOR2 = (200, 255, 200)
+BG_COLOR_LIGHT_BLUE = (200, 200, 255)
+BG_COLOR_LIGHT_GREEN = (200, 255, 200)
 
 def main():
     """
@@ -20,9 +20,9 @@ def main():
     character = pygame.image.load('images/sprite.png')
     game_time = 100
     while game_time:
-        SCREEN.fill(BG_COLOR)
+        SCREEN.fill(BG_COLOR_LIGHT_BLUE)
         if game_time % 5:
-            SCREEN.fill(BG_COLOR2)
+            SCREEN.fill(BG_COLOR_LIGHT_GREEN)
         SCREEN.blit(character, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
         SCREEN.blit(character, (0, 0))
         for event in pygame.event.get():
